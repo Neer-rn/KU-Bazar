@@ -21,6 +21,8 @@ public class Forget_password extends AppCompatActivity {
 
     private EditText inputEmail;
 
+    private TextView login;
+
     private Button btnReset;
 
     private FirebaseAuth auth;
@@ -39,7 +41,20 @@ public class Forget_password extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressbar);
 
+        login = findViewById(R.id.text_login);
+
         auth = FirebaseAuth.getInstance();
+
+
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
