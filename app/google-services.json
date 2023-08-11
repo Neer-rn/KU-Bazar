@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "935709459274",
+    "project_id": "ku-bazar",
+    "storage_bucket": "ku-bazar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935709459274:android:fcc4512a93c9ee29a2b7b3",
+        "android_client_info": {
+          "package_name": "com.neer.ku_bazar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935709459274-bogbjr5ckirnhk50aammuvfk6ra3l1e4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2lNlAx_sM3Nj8EFgTdZxUGIcTaV_KVDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935709459274-bogbjr5ckirnhk50aammuvfk6ra3l1e4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
