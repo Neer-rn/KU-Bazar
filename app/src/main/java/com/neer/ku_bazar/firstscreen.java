@@ -1,5 +1,6 @@
 package com.neer.ku_bazar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,19 +15,26 @@ import com.daimajia.androidanimations.library.YoYo;
 
 public class firstscreen extends AppCompatActivity {
 
-    private TextView appname;
+    private TextView t_ku,t_bazar;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstscreen);
 
-        appname= findViewById(R.id.appname);
+        t_ku= findViewById(R.id.ku);
+        t_bazar= findViewById(R.id.bazar);
         Typeface typeface = ResourcesCompat.getFont(this, R.font.main_font);
-        appname.setTypeface(typeface);
+        t_ku.setTypeface(typeface);
+        t_bazar.setTypeface(typeface);
 
         YoYo.with(Techniques.FadeInUp)
                 .duration(5000)
-                .playOn(findViewById(R.id.appname));
+                .playOn(findViewById(R.id.ku));
+
+        YoYo.with(Techniques.FadeInUp)
+                .duration(5000)
+                .playOn(findViewById(R.id.bazar));
 
 
         new Handler().postDelayed(new Runnable() {

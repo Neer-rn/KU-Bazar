@@ -18,10 +18,11 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <TextView
-        android:id="@+id/appname"
+        android:id="@+id/ku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KU Bazar"
+        android:text="KU"
+        android:textColor="#BA1313"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/logo"
@@ -29,13 +30,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintHorizontal_bias="0.6"/>
-
-
-
-
-
-
+        app:layout_constraintHorizontal_bias="0.3"/>
+    <TextView
+        android:id="@+id/bazar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bazar"
+        android:textColor="#BA1313"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.735"/>
 
 
 
