@@ -3,6 +3,7 @@ package com.neer.ku_bazar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,7 +28,7 @@ public class login extends AppCompatActivity {
     TextView signup,forgotpass;
     EditText email,password;
     String userID;
-    private UserSession session;
+   private UserSession session;
     FirebaseFirestore store;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -99,7 +101,7 @@ public class login extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"E-mail not verified", Toast.LENGTH_SHORT).show();
                             } else {
                                 userID = auth.getCurrentUser().getUid();
-                                store.collection("Users").document(userID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                store.collection("user").document(userID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
 
@@ -121,7 +123,12 @@ public class login extends AppCompatActivity {
                                             }
                                         } else {
 
-                                            Toast.makeText(login.this, "Login Error. Please try again.", Toast.LENGTH_SHORT).show();
+                                            new AlertDialog.Builder(login.this)
+                                                    .setTitle("Login Error")
+                                                    .setMessage(task.getException().getMessage())
+                                                    .setPositiveButton("OK", null) // You can add buttons here
+                                                    .show();
+
                                         }
 
                                     }
