@@ -29,11 +29,11 @@ public class firstscreen extends AppCompatActivity {
         t_bazar.setTypeface(typeface);
 
         YoYo.with(Techniques.FadeInUp)
-                .duration(5000)
+                .duration(3000)
                 .playOn(findViewById(R.id.ku));
 
         YoYo.with(Techniques.FadeInUp)
-                .duration(5000)
+                .duration(3000)
                 .playOn(findViewById(R.id.bazar));
 
 
@@ -45,7 +45,7 @@ public class firstscreen extends AppCompatActivity {
 
                 finish();
             }
-        },5000);
+        },3000);
     }
 
 
