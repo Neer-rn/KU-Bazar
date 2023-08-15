@@ -2,9 +2,8 @@
 
 *Welcome to KU-Bazar, an open-source e-commerce platform inspired by HamroBazar, tailored for the Kathmandu University community and beyond. KU-Bazar provides a convenient platform for users to buy and sell items directly. This platform fosters a seamless exchange of products, enabling individuals to find great deals and connect with fellow users.*
 
-![KU-Bazar Logo](https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/logo.png)
-<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/logo.png" alt="Sample Image" width="200">
 
+<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/logo.png" alt="Sample Image" width="200">
 
 
 **Features**
@@ -31,14 +30,7 @@ KU-Bazar is an open-source project, and we welcome contributions from the commun
 
 Feel free to add screenshots of your app's interface here. Be sure to highlight key features and aspects that set KU-Bazar apart.
 
-![s1](https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s1.jpg)
-<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s1.jpg" alt="Sample Image" width="200">
-![s2](https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s2.jpg)
-<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s2.jpg" alt="Sample Image" width="200">
-![s3](https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s3.jpg)
-<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s3.jpg" alt="Sample Image" width="200">
-![s4](https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s4.jpg)
-<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s4.jpg" alt="Sample Image" width="200">
+<img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s1.jpg" alt="Sample Image" width="200"> <img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s2.jpg" alt="Sample Image" width="200"> <img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s3.jpg" alt="Sample Image" width="200"> <img src="https://github.com/Neer-rn/KU-Bazar/blob/main/app/src/main/res/drawable/s4.jpg" alt="Sample Image" width="200">
 
 
 **License**
