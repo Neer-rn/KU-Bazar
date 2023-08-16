@@ -12,7 +12,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/orange_hola"
+    android:background="#818310BD"
     app:layout_constraintBottom_toBottomOf="parent">
 
 
