@@ -50,19 +50,19 @@ class UserSession {
     public static final String KEY_EMAIL = "email";
 
     // Mobile number (make variable public to access from outside)
-    public static final String KEY_MOBiLE = "mobile";
+  //  public static final String KEY_MOBiLE = "mobile";
 
     // user avatar (make variable public to access from outside)
-    public static final String KEY_PHOTO = "photo";
+  //  public static final String KEY_PHOTO = "photo";
 
     // number of items in our cart
-    public static final String KEY_CART = "cartvalue";
+ //   public static final String KEY_CART = "cartvalue";
 
     // number of items in our wishlist
-    public static final String KEY_WISHLIST = "wishlistvalue";
+  //  public static final String KEY_WISHLIST = "wishlistvalue";
 
     // check first time app launch
-    public static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+  //  public static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
     private FirebaseFirestore firebaseFirestore;
 
@@ -92,11 +92,12 @@ class UserSession {
         editor.commit();
     }
 
-    /**
+  /*
+
      * Check login method wil check user login status
      * If false it will redirect user to login page
      * Else won't do anything
-     * */
+     *
     public void checkLogin(){
         // Check login status
         if(!this.isLoggedIn()){
@@ -113,6 +114,7 @@ class UserSession {
         }
 
     }
+    */
 
     /**
      * Get stored session data
@@ -149,11 +151,38 @@ class UserSession {
         context.startActivity(i);
     }
 
-    /**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
      * Quick check for login
      * **/
     // Get Login State
-    public boolean isLoggedIn(){
+   /* public boolean isLoggedIn(){
         return pref.getBoolean(IS_LOGIN, false);
     }
 
@@ -246,9 +275,11 @@ class UserSession {
                             Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }});
-*/
+
         return wishlistProductIds;
+        */
     }
-}
+
+
 
 
