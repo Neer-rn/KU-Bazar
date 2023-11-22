@@ -1,140 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Your Bottom Navigation -->
+
     <LinearLayout
-        android:id="@+id/bottomNavigation"
-        android:layout_width="0dp"
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#818310BD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KU"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/text_bazar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bazar"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/favorite"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="100dp"
+            />
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/cart"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            android:background="@color/black">
+
+            <SearchView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:background="@android:color/transparent"
+                >
+                <requestFocus />
+            </SearchView>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/recent_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/search_all"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/recently_added"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently Added Items"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_hola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="horizontal">
-
-        <!-- Add your ImageView and TextView pairs here for each bottom navigation item -->
-
-    </LinearLayout>
-
-    <!-- Your Header Views -->
-    <TextView
-        android:id="@+id/ku"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="KU"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/text_bazar"/>
-
-    <TextView
-        android:id="@+id/text_bazar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bazar"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintLeft_toLeftOf="@+id/ku"
-        app:layout_constraintEnd_toStartOf="@+id/favorite"
-        android:layout_marginStart="8dp"/>
-
-    <ImageView
-        android:id="@+id/favorite"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/favorite"
-        app:layout_constraintTop_toTopOf="@+id/ku"
-        app:layout_constraintBottom_toBottomOf="@+id/ku"
-        app:layout_constraintEnd_toStartOf="@+id/cart"
-        app:layout_constraintStart_toEndOf="@+id/text_bazar"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintVertical_bias="0.01"/>
-
-    <ImageView
-        android:id="@+id/cart"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/cart"
-        app:layout_constraintTop_toTopOf="@+id/ku"
-        app:layout_constraintBottom_toBottomOf="@+id/ku"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/favorite"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintVertical_bias="0.01"/>
-
-    <!-- Your Header Title -->
-    <TextView
-        android:id="@+id/recently_added"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Recently Added"
-        android:textSize="35sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/ku"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Your Bottom Navigation
-    <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        tools:context=".MainActivity">
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#818310BD"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
 
         <ImageView
             android:layout_width="40dp"
@@ -151,8 +133,8 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="-38dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="-40dp"
             android:clickable="true"
             android:focusable="true"/>
 
@@ -160,7 +142,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/category"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="35dp"
             android:clickable="true"
             android:focusable="true"/>
 
@@ -171,8 +153,8 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="-49dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="-50dp"
             android:clickable="true"
             android:focusable="true"/>
 
@@ -191,7 +173,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="-55dp"
             android:clickable="true"
             android:focusable="true"/>
@@ -211,7 +193,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="-62dp"
             android:clickable="true"
             android:focusable="true"/>
@@ -221,11 +203,8 @@
             android:layout_height="40dp"
             android:src="@drawable/sell"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="5dp"
             android:clickable="true"
-            android:focusable="true"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"/>
+            android:focusable="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -234,84 +213,11 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="-37dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="-32dp"
             android:clickable="true"
-            android:focusable="true"
-            android:layout_marginRight="5dp"/>
-
+            android:focusable="true"/>
 
     </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/ku"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="KU"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/text_bazar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bazar"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@+id/ku"
-            android:layout_marginLeft="10dp"
-            />
-
-        <ImageView
-            android:id="@+id/favorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/favorite"
-            app:layout_constraintLeft_toRightOf="@+id/text_bazar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintVertical_bias="0.01"
-            app:layout_constraintHorizontal_bias="0.4"
-            android:clickable="true"
-            android:focusable="true"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cart"
-            app:layout_constraintLeft_toRightOf="@+id/favorite"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintVertical_bias="0.01"
-            app:layout_constraintHorizontal_bias="0.6"
-            android:clickable="true"
-            android:focusable="true" />
-
-        <TextView
-            android:id="@+id/recently_added"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recently Added"
-            android:textSize="35sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/ku"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.05"
-            app:layout_constraintHorizontal_bias="0" />
-
-
-
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

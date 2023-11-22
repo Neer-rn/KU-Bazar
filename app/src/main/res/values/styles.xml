@@ -7,6 +7,9 @@
 
     </style>
 
+    <style name="SearchBar" parent="ShapeAppearanceOverlay.Material3.SearchBar">
+        <item name="android:background">@drawable/rounded_shape</item>
+    </style>
 
 
 
